@@ -50,11 +50,20 @@
     <p>Instant estimates for wraps, chrome deletes, PPF, tinting & more</p>
   </header>
 
-  <iframe
-    class="bot-container"
-    src="https://www.chatbase.co/chatbot-iframe/IcQ34S48JAlRm8kGLMg0a"
-    title="Wrap Quote AI Bot">
-  </iframe>
+<iframe
+  class="bot-container"
+  src="https://www.chatbase.co/chatbot-iframe/IcQ34S48JAlRm8kGLMg0a?t="
+  id="chatbot"
+  title="Wrap Quote AI Bot">
+</iframe>
+
+<script>
+  // Force iframe to reload on each page load by appending timestamp
+  window.onload = function () {
+    const iframe = document.getElementById("chatbot");
+    iframe.src = iframe.src + new Date().getTime();
+  };
+</script>
 
   <div class="examples">
     <h2>🧪 Try These Demo Questions:</h2>
